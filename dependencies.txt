@@ -1,0 +1,27 @@
+1) React:
+npx create-react-app react-crash-course-job-listing
+
+2) Tailwind: https://tailwindcss.com/docs/guides/create-react-app
+npm install -D tailwindcss
+npx tailwindcss init
+
+3) React icons:
+npm i react-icons
+
+4) React router:
+npm i react-router-dom
+
+5) json-server:
+npm i -D json-server
+
+6) react spinners or loaders:
+npm i react-spinners
+
+7) react toastify package:
+npm i react-toastify
+
+8) Chrome exteension:
+react developer tools\
+
+9) VS code extension:
+ES7+ React/Redux/React-Native snippets
