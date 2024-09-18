@@ -4,7 +4,6 @@ import JobListing from './JobListing'
 
 function JobListings() {
     const { jobs } = jobsData
-    {console.log(jobs)}
     const recentJobs = jobs.slice(0, 3)
     return (
         <section className="bg-blue-50 px-4 py-10">
