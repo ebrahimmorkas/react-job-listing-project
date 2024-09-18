@@ -1,28 +1,32 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HomeCards from "./components/HomeCards"
-import JobListings from './components/JobListings'
-import ViewAllJobs from './components/ViewAllJobs'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import NavbarLayout from './layouts/NavbarLayout'
 
 function App() {
   return (
     <>
-    
-    <Navbar />
-    {/* <!-- Hero --> */}
-    <Hero title = "Become a React Dev" subtitle = "Find the react job that fits your skill set" />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<NavbarLayout />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <Navbar /> */}
+      {/* <!-- Hero --> */}
+      {/* <Hero title = "Become a React Dev" subtitle = "Find the react job that fits your skill set" /> */}
 
-    {/* <!-- Developers and Employers --> */}
-    <HomeCards />
+      {/* <!-- Developers and Employers --> */}
+      {/* <HomeCards /> */}
 
-    {/* <!-- Browse Jobs --> */}
-    <JobListings />
+      {/* <!-- Browse Jobs --> */}
+      {/* <JobListings /> */}
 
-    {/* View All Jobs */}
-    <ViewAllJobs />
+      {/* View All Jobs */}
+      {/* <ViewAllJobs /> */}
 
-  </>
+    </>
   )
 }
 
