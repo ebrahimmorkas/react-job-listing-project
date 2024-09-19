@@ -15,7 +15,7 @@ function Home() {
     <HomeCards />
 
     {/* <!-- Browse Jobs --> */}
-    <JobListings />
+    <JobListings isHome={true} />
 
     {/* View All Jobs */}
     <ViewAllJobs />

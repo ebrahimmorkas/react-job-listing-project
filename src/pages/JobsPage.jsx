@@ -1,8 +1,9 @@
 import React from 'react'
+import JobListings from '../components/JobListings'
 
 function JobsPage() {
   return (
-    <div>JobsPage</div>
+    <JobListings />
   )
 }
 
