@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import NavbarLayout from './layouts/NavbarLayout'
 import JobsPage from './pages/JobsPage'
 import NotFoundPage from './pages/NotFoundPage'
+import SingleJobInfo from './pages/SingleJobInfo'
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<NavbarLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/jobs" element={<JobsPage />} />
+            <Route path="/jobs" element={<JobsPage />} /><Route path='jobs/:id' element={<SingleJobInfo />} />
+            
             <Route path="*" element={<NotFoundPage />} />
           </Route> 
         </Routes>
