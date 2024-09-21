@@ -9,8 +9,15 @@ import AddJob from './pages/AddJob'
 
 function App() {
 
-  const addJob = (newJob) => {
-    console.log(newJob)
+  const addJob = async (newJob) => {
+    const res = await fetch('http://localhost:8000/jobs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'applications/json',
+      },
+      body: JSON.stringify(newJob),
+    });
+    return;
   }
 
   return (
