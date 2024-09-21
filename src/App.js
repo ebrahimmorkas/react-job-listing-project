@@ -8,15 +8,21 @@ import SingleJobInfo from './pages/SingleJobInfo'
 import AddJob from './pages/AddJob'
 
 function App() {
+
+  const addJob = (newJob) => {
+    console.log(newJob)
+  }
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<NavbarLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/jobs" element={<JobsPage />} /><Route path='jobs/:id' element={<SingleJobInfo />} />
+            <Route path="/jobs" element={<JobsPage />} />
+            <Route path='jobs/:id' element={<SingleJobInfo />} />
             <Route path="*" element={<NotFoundPage />} />
-            <Route path="/jobs/add" element={<AddJob />} /> 
+            <Route path="/add-job" element={<AddJob addJob={addJob}/>} /> 
           </Route> 
         </Routes>
       </BrowserRouter>
