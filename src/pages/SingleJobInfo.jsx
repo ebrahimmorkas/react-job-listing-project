@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { useParams, Link } from 'react-router-dom';
 import Spinners from '../components/Spinners'
 
@@ -56,6 +56,7 @@ function SingleJobInfo() {
                                 <div className="text-gray-500 mb-4">{job.type}</div>
                                 <h1 className="text-3xl font-bold mb-4">{job.title}</h1>
                                 <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
+                                    <FaMapMarker className='txt-orange mr-1' />
                                     <p className="text-orange-700">{job.location}</p>
                                 </div>
                             </div>
