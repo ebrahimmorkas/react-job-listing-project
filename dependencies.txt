@@ -25,3 +25,9 @@ react developer tools\
 
 9) VS code extension:
 ES7+ React/Redux/React-Native snippets
+
+10 Youtub link:
+https://youtu.be/LDB4uaJ87e0?si=NlfdWFca5r0_hfxn
+
+11 Youtuber github link:
+https://github.com/bradtraversy/react-crash-2024

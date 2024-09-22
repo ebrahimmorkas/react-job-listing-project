@@ -6,6 +6,7 @@ import JobsPage from './pages/JobsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import SingleJobInfo from './pages/SingleJobInfo'
 import AddJob from './pages/AddJob'
+import UpdateJobPage from './pages/UpdateJobPage'
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
     return;
   }
 
+  const updateJob = (jobId) => {}
+
   return (
     <>
       <BrowserRouter>
@@ -38,6 +41,7 @@ function App() {
             <Route path='jobs/:id' element={<SingleJobInfo deleteJob={deleteJob}/>} />
             <Route path="*" element={<NotFoundPage />} />
             <Route path="/add-job" element={<AddJob addJob={addJob}/>} /> 
+            <Route path='/update-job/:id' element={<UpdateJobPage update={updateJob}/>} />
           </Route> 
         </Routes>
       </BrowserRouter>
