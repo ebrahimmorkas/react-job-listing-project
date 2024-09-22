@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Spinners from '../components/Spinners'
+import { toast } from 'react-toastify';
 
 function SingleJobInfo({deleteJob}) {
     const [job, setJob] = useState(null); // Initialize with null to handle loading state
@@ -12,6 +13,7 @@ function SingleJobInfo({deleteJob}) {
     const deletejob = (jobId) => {
         console.log(`from com ${jobId}`)
         deleteJob(jobId)
+        toast.success("job deleted successfully");
         navigate('/jobs')
     }
 
