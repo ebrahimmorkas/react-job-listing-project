@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Spinners from '../components/Spinners'
 
-function SingleJobInfo() {
+function SingleJobInfo({deleteJob}) {
     const [job, setJob] = useState(null); // Initialize with null to handle loading state
     const [loading, setLoading] = useState(true)
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    const deletejob = (jobId) => {
+        console.log(`from com ${jobId}`)
+        deleteJob(jobId)
+        navigate('/jobs')
+    }
 
     useEffect(() => {
         const fetchJob = async () => {
@@ -91,7 +98,7 @@ function SingleJobInfo() {
                                 >
                                     Edit Job
                                 </Link>
-                                <button
+                                <button onClick={() => {deletejob(job.id)}}
                                     className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                                 >
                                     Delete Job
